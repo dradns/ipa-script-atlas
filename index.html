@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IPA Atlas — звуки четырёх языков</title>
+  <meta name="description" content="Сравнительный атлас звуков хинди, урду, арабского фусха и путунхуа. Конкретные звуки в квадратных скобках, узкая транскрипция и артикуляция.">
+  <meta name="theme-color" content="#f6f4ee">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e8efe3'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='%232f6b4f'%3E%5Bp%5D%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+  <a class="sr-only" href="#atlas">Перейти к атласу</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="IPA Atlas — на главную">
+        <span class="brand-mark" aria-hidden="true">[p]</span>
+        <span class="brand-text">
+          <strong>IPA Atlas</strong>
+          <small>звуки четырёх языков</small>
+        </span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#atlas">Атлас</a>
+        <a href="#notation">Обозначения</a>
+        <a href="#about">О проекте</a>
+      </nav>
+      <div class="header-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        offline edition · 2026
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">фонетический атлас · 04 языка</p>
+        <h1 id="hero-title">Звук, который<br>можно <em>увидеть.</em></h1>
+        <p class="hero-lead">
+          Один и тот же звук — разными буквами. В одной таблице — хинди, урду,
+          арабский фусха и путунхуа. В колонке IPA — <strong>конкретный звук
+          в квадратных скобках</strong>, а рядом все четыре письма, примеры
+          и артикуляция. Ничего выбирать не нужно.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#atlas">
+            Открыть атлас
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="btn" href="#notation">
+            <span class="btn-bracket" aria-hidden="true">[ ]</span>
+            Как читать запись
+          </a>
+        </div>
+        <div class="hero-meta" aria-label="Атлас в цифрах">
+          <div class="hero-stat"><strong>4</strong><span>языка</span></div>
+          <div class="hero-stat"><strong>86</strong><span>звуков</span></div>
+          <div class="hero-stat"><strong>4</strong><span>письменности</span></div>
+        </div>
+      </div>
+
+      <aside class="specimen" aria-label="Образец карточки звука">
+        <div class="specimen-top">
+          <span>specimen no. 01</span>
+          <span class="tag"><span class="status-dot" aria-hidden="true"></span> узкая запись</span>
+        </div>
+        <div class="specimen-main">
+          <div>
+            <div class="specimen-sound" aria-label="Звук p в квадратных скобках">
+              <span class="br">[</span>p<span class="br">]</span>
+            </div>
+            <p class="specimen-desc">глухой губно-губной взрывной</p>
+          </div>
+          <button class="play-big" id="hero-play" type="button" aria-label="Прослушать пример: хинди, पल">
+            <span class="play-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 5.5v13l10-6.5-10-6.5z"/></svg>
+            </span>
+            <span class="bars" aria-hidden="true">
+              <i style="--h:7px;--d:0s"></i><i style="--h:14px;--d:.1s"></i><i style="--h:10px;--d:.2s"></i><i style="--h:17px;--d:.3s"></i>
+            </span>
+          </button>
+        </div>
+        <div class="specimen-scripts" aria-label="Одна и та же фонема в четырёх письменностях">
+          <div class="script-cell"><span class="glyph deva" lang="hi">प</span><small>хинди</small></div>
+          <div class="script-cell"><span class="glyph urdu" lang="ur" dir="rtl">پ</span><small>урду</small></div>
+          <div class="script-cell"><span class="glyph arabic" lang="ar" dir="rtl">ب</span><small>фусха</small></div>
+          <div class="script-cell"><span class="glyph han" lang="zh">爸</span><small>путунхуа</small></div>
+        </div>
+        <div class="specimen-foot">
+          <span>p · pʰ · b · bʱ · m</span>
+          <span class="caption">губные, серия из пяти</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="atlas-section wrap" id="atlas" aria-labelledby="atlas-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">сравнительный атлас</p>
+          <h2 id="atlas-title">Четыре языка —<br>одна система координат.</h2>
+        </div>
+        <p>
+          Все четыре языка рядом. Для каждого звука — колонки хинди, урду, фусха
+          и путунхуа. Прочерк значит, что отдельного звука в этой системе нет.
+          Нажмите на язык, чтобы открыть карточку.
+        </p>
+      </div>
+
+
+      <section class="lang-panel" id="lang-panel" aria-label="Сравнительная таблица звуков" tabindex="0">
+        <div class="panel-body" id="panel-body">
+          <div class="empty">
+            <div class="sym">[ ]</div>
+            <h3>Собираем таблицу</h3>
+            <p>Если сообщение осталось на экране, проверьте, что рядом лежит папка <code>assets</code>.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="notation-section wrap" id="notation" aria-labelledby="notation-title">
+      <div class="section-head">
+        <div>
+          <p class="kicker">как читать запись</p>
+          <h2 id="notation-title">Квадратные скобки —<br>это важно.</h2>
+        </div>
+        <p>
+          В колонке IPA намеренно нет косых черт. Мы показываем не «идеальную»
+          фонему, а конкретную реализацию — с местом, способом и голосом.
+        </p>
+      </div>
+
+      <div class="notation-grid">
+        <article class="notation-card" data-n="01">
+          <div class="symbol"><span class="slash">/</span>p<span class="slash">/</span> → [p]</div>
+          <h3>Фонема и звук</h3>
+          <p><code>/p/</code> — абстрактная единица языка. <code>[p]</code> — то, что реально произносится. В атласе — только второе.</p>
+        </article>
+        <article class="notation-card" data-n="02">
+          <div class="symbol">pʰ · bʱ</div>
+          <h3>Придыхание</h3>
+          <p><code>pʰ</code> — выдох после взрыва. <code>bʱ</code> — breathy voice: придыхание вместе со звонкостью.</p>
+        </article>
+        <article class="notation-card" data-n="03">
+          <div class="symbol">t̪ · ʈ · ɽ</div>
+          <h3>Место и способ</h3>
+          <p><code>t̪</code> — язык у зубов, <code>ʈ</code> — ретрофлексный, <code>ɽ</code> — один удар языка вместо дрожания.</p>
+        </article>
+        <article class="notation-card" data-n="04">
+          <div class="symbol">t͡ʃ · ɹ̩ · tˤ</div>
+          <h3>Слитность и тембр</h3>
+          <p><code>t͡ʃ</code> — аффриката, <code>ɹ̩</code> — слоговой согласный, <code>tˤ</code> — фарингализация, «тёмный» звук.</p>
+        </article>
+      </div>
+
+      <div class="notation-rule">
+        <span class="big"><span class="slash">/</span>p<span class="slash">/</span> <span class="arrow">→</span> [p]</span>
+        <span>В колонке IPA этого атласа всегда стоит конкретный звук в квадратных скобках и его артикуляция.</span>
+        <span class="stamp">только [ ]</span>
+      </div>
+    </section>
+
+    <section class="about-section wrap" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div>
+          <p class="kicker">о проекте</p>
+          <h2 id="about-title">Не таблица ради таблицы.</h2>
+          <p>
+            Это автономный фонетический справочник для тех, кто учит хинди, урду,
+            арабский или китайский и хочет понимать, что именно происходит во рту.
+            Каждый звук описан по месту и способу артикуляции, а пример можно
+            прослушать.
+          </p>
+          <p>
+            Атлас собран вручную по описаниям Международного фонетического
+            алфавита. Он не заменяет учебник и не претендует на диалектную
+            полноту: показаны литературные нормы и типичные реализации.
+          </p>
+        </div>
+        <div class="about-notes">
+          <div class="about-note">
+            <span class="no">i</span>
+            <div><h3>Почему не /p/</h3><p>Косые черты обозначают фонему — уровень языка, а не физический звук. Нам важен именно звук, поэтому везде квадратные скобки.</p></div>
+          </div>
+          <div class="about-note">
+            <span class="no">ii</span>
+            <div><h3>Что такое узкая запись</h3><p>Диакритики вроде <code>pʰ</code>, <code>bʱ</code>, <code>t̪</code> и <code>tˤ</code> уточняют придыхание, место смычки и тембр. Чем больше знаков — тем конкретнее звук.</p></div>
+          </div>
+          <div class="about-note">
+            <span class="no">iii</span>
+            <div><h3>Аудио</h3><p>Кнопка проигрывает не изолированный шум, а пример — слово, в котором звук слышен в естественном окружении. Это честнее, чем синтезированный «щелчок».</p></div>
+          </div>
+          <div class="about-note">
+            <span class="no">iv</span>
+            <div><h3>Границы</h3><p>Один язык — одна литературная норма. Диалектные варианты и позиционные аллофоны отмечены в карточке, но не образуют отдельные строки.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner wrap">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">[p]</span>
+        <span>IPA Atlas · звуки четырёх языков</span>
+      </div>
+      <div class="footer-links">
+        <span>хинди</span><span>урду</span><span>фусха</span><span>путунхуа</span>
+      </div>
+      <div class="footer-note">
+        Автономная офлайн-версия. Аудио примеров синтезировано для демонстрации;
+        фонетические описания — учебные, не нормативные.
+      </div>
+    </div>
+  </footer>
+
+  <div class="drawer-backdrop" id="drawer-backdrop" hidden></div>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true">
+    <div id="drawer-content"></div>
+  </aside>
+
+  <div class="notification" id="notification" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div style="padding:24px; margin:24px; border:1px solid #d3cbb9; border-radius:12px; background:#fffefa;">
+      Для работы атласа нужен JavaScript: данные и переключение языков работают в браузере.
+    </div>
+  </noscript>
+
+  <script src="assets/data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
